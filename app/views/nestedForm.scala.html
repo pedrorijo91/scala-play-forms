@@ -1,0 +1,17 @@
+@import helper._
+
+@(userForm: Form[Order])(implicit messages: Messages)
+
+@main("Scala Play forms tutorial") {
+    <h1>Scala Play forms tutorial</h1>
+
+    @form(action = routes.AdvancedController.nestedFormPost()) {
+        @inputText(userForm("clientName"))
+        @inputText(userForm("address.country"))
+        @inputText(userForm("address.city"))
+        @inputText(userForm("address.street"))
+        @inputText(userForm("address.buildingNbr"))
+
+        <input type="submit" value="Submit">
+    }
+}

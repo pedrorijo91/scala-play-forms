@@ -15,5 +15,14 @@ POST    /inputTypesForm             controllers.BasicController.inputTypesFormPo
 GET     /fileForm                   controllers.BasicController.fileForm
 POST    /fileForm                   controllers.BasicController.fileFormPost
 
+GET     /nestedForm                 controllers.AdvancedController.nestedForm
+POST    /nestedForm                 controllers.AdvancedController.nestedFormPost
+
+GET     /customBindForm             controllers.AdvancedController.customBindForm
+POST    /customBindForm             controllers.AdvancedController.customBindFormPost
+
+GET     /styledForm                 controllers.AdvancedController.styledForm
+POST    /styledForm                 controllers.AdvancedController.styledFormPost
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

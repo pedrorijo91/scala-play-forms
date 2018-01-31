@@ -1,0 +1,14 @@
+@import helper._
+
+@(userForm: Form[FormWithURL])(implicit messages: Messages)
+
+@main("Scala Play forms tutorial") {
+    <h1>Scala Play forms tutorial</h1>
+
+    @form(action = routes.AdvancedController.customBindFormPost()) {
+        @inputText(userForm("name"))
+        @inputText(userForm("url"))
+
+        <input type="submit" value="Submit">
+    }
+}
