@@ -1,0 +1,23 @@
+@import helper._
+
+@(userForm: Form[ConstrainedForm])(implicit messages: Messages)
+
+@main("Scala Play forms tutorial") {
+    <h1>Scala Play forms tutorial</h1>
+
+
+    @form(action = routes.BasicController.complexFormPost()) {
+        @inputText(userForm("name"))
+        @inputText(userForm("nickname"))
+        @inputText(userForm("age"))
+        @inputText(userForm("email"))
+        @inputText(userForm("date"))
+        @inputText(userForm("opt"))
+        @inputText(userForm("employed"))
+        @repeat(userForm("lst"), min = 3) { emailField =>
+            @inputText(emailField)
+        }
+
+        <input type="submit" value="Submit">
+    }
+}

@@ -1,0 +1,12 @@
+@import helper._
+
+@()(implicit messages: Messages)
+
+@main("Scala Play forms tutorial") {
+    <h1>Scala Play forms tutorial</h1>
+
+    @form(action = routes.BasicController.fileFormPost(), 'enctype -> "multipart/form-data") {
+        <input type="file" name="file">
+        <input type="submit" value="Submit">
+    }
+}

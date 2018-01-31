@@ -1,0 +1,19 @@
+@()
+
+@main("Welcome to Play forms") {
+  <h1>Welcome to Play forms!</h1>
+
+  <div>
+    <ul>
+      <li>Basic Forms
+        <ul>
+          <li><a href="@routes.BasicController.simpleForm()">Simple form</a></li>
+          <li><a href="@routes.BasicController.filledForm()">Pre-filled form</a></li>
+          <li><a href="@routes.BasicController.complexForm()">Complex form</a></li>
+          <li><a href="@routes.BasicController.inputTypesForm()">Input types</a></li>
+          <li><a href="@routes.BasicController.fileForm()">Input file</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+}

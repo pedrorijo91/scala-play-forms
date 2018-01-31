@@ -1,0 +1,18 @@
+@import helper._
+
+@(userForm: Form[InputTypesForm])(implicit messages: Messages)
+
+@main("Scala Play forms tutorial") {
+    <h1>Scala Play forms tutorial</h1>
+
+    @form(action = routes.BasicController.inputTypesFormPost()) {
+        @inputText(userForm("name"))
+        @inputPassword(userForm("password"))
+        @textarea(userForm("description"))
+        @checkbox(userForm("rich"))
+        @inputDate(userForm("date"))
+        @inputRadioGroup(userForm("favColor"), InputTypesForm.Preferences.values.toSeq.map(pref => pref.toString -> pref.toString))
+        @select(userForm("leastFavColor"), InputTypesForm.Preferences.values.toSeq.map(pref => pref.toString -> pref.toString))
+        <input type="submit" value="Submit">
+    }
+}

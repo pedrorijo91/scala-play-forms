@@ -1,0 +1,19 @@
+# Routes
+GET     /                           controllers.BasicController.index
+
+GET     /simpleForm                 controllers.BasicController.simpleForm
+POST    /simpleForm                 controllers.BasicController.simpleFormPost
+
+GET     /filledForm                 controllers.BasicController.filledForm
+
+GET     /complexForm                controllers.BasicController.complexForm
+POST    /complexForm                controllers.BasicController.complexFormPost
+
+GET     /inputTypesForm             controllers.BasicController.inputTypesForm
+POST    /inputTypesForm             controllers.BasicController.inputTypesFormPost
+
+GET     /fileForm                   controllers.BasicController.fileForm
+POST    /fileForm                   controllers.BasicController.fileFormPost
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
